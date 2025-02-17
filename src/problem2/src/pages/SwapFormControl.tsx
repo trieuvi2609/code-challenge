@@ -44,7 +44,6 @@ const CurrencySwapForm: React.FC = () => {
   const [tokens, setTokens] = React.useState<TokenPrice[]>([]);
   const [toAmount, setToAmount] = React.useState<number>(0);
   const [loading, setLoading] = React.useState(false);
-  console.log("toAmount", toAmount);
   const {
     control,
     handleSubmit,
@@ -66,7 +65,6 @@ const CurrencySwapForm: React.FC = () => {
     const currentFromToken = watchedValues.fromToken;
     const currentToToken = watchedValues.toToken;
     const currentFromAmount = watchedValues.fromAmount;
-    console.log("currentFromAmount", currentFromAmount);
 
     resetField("fromToken", { defaultValue: currentToToken });
     resetField("toToken", { defaultValue: currentFromToken });
